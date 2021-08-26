@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+  <br><br>
+
+  <center>
+    <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
+
+    <form method="POST" autocomplete="off">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group">
+        <p>
+        <h3>{{ form.as_p }}</h3>
+        </p>  
+        <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+      </div>
+    </form>
+  </center>
+<br>
+  <div class="row">
+  <div class="col-4 p-3 bg-light">
+    <center>
+    <div class="icon1"><i class="fas fa-map-marker-alt fa-2x"></i></div>
+    <h3>Address</h3>
+    <h5>RM No. 13,Ganesh Krupa Society,<br>Shastri Nagar,<br>
+    Thane(400606)</h5><br>
+
+    <div class="icon1"> <i class="fas fa-phone fa-2x"></i></div>
+    <h3>Phone</h3>
+    <h5>9987437195</h5><br>
+
+    <div class="icon1"><i class="fas fa-envelope-open-text fa-2x"></i></div>
+    <h3> Email</h3>
+    <h5>www.salviasit@gmail.com</h5>
+    </center>
+  </div>
+  <div class="col-8">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1883.
+        8009769065973!2d72.95342795805472!3d19.212580296752403!2m3!1f0!2f0!3f0!
+        3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b972322cde99%3A0x4d28d6a1788330d2!
+        2sManchester%20Tower!5e0!3m2!1sen!2sin!4v1610117145821!5m2!1sen!2sin" width="850"
+        height="450" frameborder="0" style="border:0;" allowfullscreen="" 
+        aria-hidden="false" tabindex="0"></iframe>
+  </div>
+  </div>
+
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
